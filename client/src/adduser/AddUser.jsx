@@ -18,7 +18,7 @@ function AddUser() {
     };
     const submitForm= async(e)=>{
         e.preventDefault();
-        axios.post("http://localhost:8000/api/user",user)
+        axios.post((`${process.env.REACT_APP_API_URL}/api/user`),user)
         .then((response)=>{
             toast.success(response.data.message,{position: "top-right"});
         

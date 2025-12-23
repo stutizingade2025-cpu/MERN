@@ -8,7 +8,7 @@ const User = () => {
     useEffect(()=>{
         const fetchUsers=async()=>{
             try{
-               const response=await axios.get("http://localhost:8000/api/users");
+               const response=await axios.get(`${process.env.REACT_APP_API_URL}/api/users`);
                console.log(response.data);
                 setUsers(response.data)
             }
@@ -21,7 +21,7 @@ const User = () => {
 
   const deleteUser = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:8000/api/delete/user/${id}`);
+      const response = await axios.delete(`${process.env.REACT_APP_API_URL}/api/delete/user/${id}`);
       setUsers(prevUsers => prevUsers.filter(user => user._id !== id));
       toast.success(response.data.message, { position: "top-right" });
     } catch (error) {
