@@ -1,0 +1,23 @@
+.userTable {
+    width: 40%;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    background-color: blanchedalmond;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.userTable table{
+    width: 100%;
+   margin-top: 30px;
+
+}
+.userTable table thead th{
+    background-color: rgb(68, 79, 230);
+    color: white;
+    padding: 10px;
+}
+.userTable table tbody td{
+    text-align: center;
+    padding: 10px;
+}
