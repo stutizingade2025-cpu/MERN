@@ -28,7 +28,11 @@ const connectDB = async () => {
       process.exit(1);
     }
   }
+    app.get("/", (req, res) => {
+  res.send("API is running 🚀");
+});
     connectDB().then(() => {
     app.listen(port, () => {
     console.log(`xingShop Backend is listening at http://localhost:${port}`)
   })})
+
